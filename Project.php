@@ -1,6 +1,5 @@
 <?php
 
-
 class Project
 {
     private string $projectName;
@@ -17,7 +16,7 @@ class Project
 
     public function addTeamMember(AbstractEmployee $employee): void
     {
-        array_push($team, $employee);
+        array_push($this->team, $employee);
     }
 
     public function getTeamMembers(): array

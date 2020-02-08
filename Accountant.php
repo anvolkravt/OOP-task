@@ -1,13 +1,15 @@
 <?php
 
+require_once 'AbstractAdministrationEmployee.php';
+
 class Accountant extends AbstractAdministrationEmployee
 {
     public static function calculateProjectCost(Project $project): float
     {
-        $cost = 0;
         $members = $project->getTeamMembers();
-        foreach (array_expression as $value)
-            statement
-        return $cost;
+        $getProjectReward = function($member) {
+            return $member->calculateRewardForProject();
+        };
+        return array_sum(array_map($getProjectReward, $members));
     }
 }

@@ -9,8 +9,18 @@ class Company
         $this->name = $name;
     }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
     public function addProject(Project $project): void
     {
-        array_push($projects, $project);
+        array_push($this->projects, $project);
+    }
+
+    public function getProjects(): array
+    {
+        return $this->projects;
     }
 }
