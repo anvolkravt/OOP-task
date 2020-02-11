@@ -9,10 +9,18 @@ abstract class AbstractProjectEmployee extends AbstractEmployee
     private float $rateForPeriod;
     private float $rewardForProject;
 
-    public function __construct(string $firstName, string $lastName, float $paymentPeriods, float $rateForPeriod)
+    public function __construct(string $firstName, string $lastName)
     {
         parent::__construct($firstName, $lastName);
+    }
+
+    public function setPaymentPeriods(float $paymentPeriods): void
+    {
         $this->paymentPeriods = $paymentPeriods;
+    }
+
+    public function setRateForPeriod(float $rateForPeriod): void
+    {
         $this->rateForPeriod = $rateForPeriod;
     }
 

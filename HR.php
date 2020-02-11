@@ -9,4 +9,14 @@ class HR extends AbstractAdministrationEmployee
         $employee->beAssignedToProject($project);
         $project->addTeamMember($employee);
     }
+
+    public static function setPediodsAndPaymentsForEmployee(
+        AbstractProjectEmployee $employee,
+        float $paymentPeriods,
+        float $rateForPeriod
+    ): void
+    {
+        $employee->setPaymentPeriods($paymentPeriods);
+        $employee->setRateForPeriod($rateForPeriod);
+    }
 }
